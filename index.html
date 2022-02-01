@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru" class="document">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каляка | Рисование для всех</title>
+    <link rel="stylesheet" href="pages/index.css" />
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <img class="header__logo" src="/images/logo.svg" alt="логотип с изображением каляки">
+      <h1 class="header__title">Не умеете рисовать?Не беда!</h1>
+      <p class="header__text">С помощью нашего приложения вы можете чиркануть каляку и получить шедевр.</p>
+      <img class="header__image" src="images/header-mobile-screen.svg" alt="экран мобильного телефона с нарисованной калякой">
+      <a class="header__link page__button page__button_type_light" href="" onclick="return false;">Подробнее</a>
+    </header>
+    <main class="content">
+      <div class="content__slider-container">
+        <ul class="content__cards">
+          <li class="content__card content__slider-item">
+            <p class="content__subtitle">AI</p>
+            <h3 class="content__title">Умный интелект приложения</h3>
+            <p class="content__text">С помощью AI приложение анализирует картины мастеров и современных практиков рисования, и достраивает картину за вас.</p>
+          </li>
+          <li class="content__card content__slider-item">
+            <p class="content__subtitle">Ч/Б и Цвет</p>
+            <h3 class="content__title">Рисуйте в любом стиле</h3>
+            <p class="content__text">Будь то карандашная каляка-маляка или цветное произведение, приложение поможет в любой ситуации.</p>
+          </li>
+        </ul>
+        <ul class="content__slider content__visibility">
+          <li class="content__slider-button content__slider-button_type_dark content__slide-one"></li>
+          <li class="content__slider-button content__slider-button_type_light content__slide-two"></li>
+        </ul>
+      </div>
+      <h2 class="content__big-title">Чик-чирик и ваша каляка превращается в изумительное произведение искусства.</h2>
+      <div class="content__slider-container">
+        <div class="content__image-container">
+          <img class="content__image content__slider-item" src="images/mobile-screen1.svg" alt="экран мобильного телефона с неаккуаратно нарисованным лицом">
+          <img class="content__image content__slider-item" src="images/mobile-screen2.svg" alt="экран мобильного телефона с аккуратно нарисованным лицом">
+          <img class="content__image content__slider-item" src="images/mobile-screen3.svg" alt="экран мобильного телефона с нарисованной головой человека">
+        </div>
+        <ul class="content__slider content__visibility">
+          <li class="content__slider-button content__slider-button_type_dark content__slide-one"></li>
+          <li class="content__slider-button content__slider-button_type_light content__slide-two"></li>
+          <li class="content__slider-button content__slider-button_type_light content__slide-three"></li>
+        </ul>
+      </div>
+      <div class="content__slider-container">
+        <ul class="content__cards">
+          <li class="content__card content__slider-item">
+            <p class="content__subtitle">Быстро</p>
+            <h3 class="content__title">Проблем с рисованием — нет</h3>
+            <p class="content__text">Рисуйте в приложении доступными кистями: карандаш, маркер, линер, масляная кисть и многие другие...</p>
+          </li>
+          <li class="content__card content__slider-item">
+            <p class="content__subtitle">Просто</p>
+            <h3 class="content__title">Нарисовали, преобразовали, сохранили</h3>
+            <p class="content__text">Раз, два, три, больше нечего тут рассказать.</p>
+          </li>
+        </ul>
+        <ul class="content__slider content__visibility">
+          <li class="content__slider-button content__slider-button_type_dark content__slide-one"></li>
+          <li class="content__slider-button content__slider-button_type_light content__slide-two"></li>
+        </ul>
+      </div>
+      <h2 class="content__big-title">Качайте приложение и улучшайте свои художества, а потом хвастайтесь ими!</h2>
+      <div class="content__form">
+        <h3 class="content__form-title">Хотите нам что-то посоветовать?</h3>
+        <p class="content__form-text">Оставьте заявку и мы свяжемся с вами.</p>
+        <form class="content__form-container" name="application" id="application">
+          <div class="content__form-data">
+            <input type="text" name="name" id="name" placeholder="Ваше Имя" class="content__form-input">
+            <input type="email" name="email" id="email" placeholder="Контактный Email" class="content__form-input">
+            <textarea name="message" id="message" cols="30" rows="4" placeholder="Сообщение" class="content__form-input content__form-input_type_message"></textarea>
+          </div>
+          <button class="content__button page__button page__button_type_dark" type="submit" form="application" disabled>Оставить заявку</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__title">Хотите скачать приложение?</h3>
+      <p class="footer__text">Качайте в ЭпСтор и ГуглПлэй.</p>
+      <a class="footer__link page__button page__button_type_light" href="" onclick="return false;">Уже скоро!</a>
+      <img class="footer__image" src="images/footer-mobile-screen.svg" alt="экран мобильного телефона с изображением жеста класс">
+    </footer>
+    <script src="/scripts/index.js"></script>
+  </body>
+</html>
