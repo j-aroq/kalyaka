@@ -4,13 +4,16 @@
   @include flex($direction: column, $align: flex-start);
   width: calc(100vw - 11.1vw - 20px);
   max-width: 1260px;
-  padding: 60px 0 60px 11.1vw;
+  padding: 60px 0 60px 160px;
+  // padding: 60px 0 60px 11.1vw;
   margin-top: 60px;
   position: relative;
 
   @media (max-width: $tablet) {
     width: calc(100vw - 6.5vw - 20px);
-    padding: 50px 0 50px 6.5vw;
+    padding: 50px 0 50px 50px;
+    max-width: 1000px;
+    // padding: 50px 0 50px 6.5vw;
     margin-top: 0;
   }
   @media (max-width: $mobile) {
@@ -62,7 +65,8 @@
     height: 630px;
     position: absolute;
     top: -30px;
-    right: 15.3vw;
+    right: 220px;
+    // right: 15.3vw;
     clip: rect(0, 311px, 500px, 0);
     @media (max-width: $tablet) {
       width: 250px;
