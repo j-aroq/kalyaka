@@ -101,7 +101,7 @@
   &__image-container {
     @include grid($gap-column: 25px);
     grid-template-columns: repeat(3, min-content);
-    justify-content: center;
+    justify-items: center;
     @media (max-width: $tablet) {
       column-gap: 15px;
     }

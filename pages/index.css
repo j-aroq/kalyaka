@@ -345,7 +345,7 @@
        column-gap: 25px;
   grid-template-columns: repeat(3, -webkit-min-content);
   grid-template-columns: repeat(3, min-content);
-  justify-content: center;
+  justify-items: center;
 }
 @media (max-width: 1350px) {
   .content__image-container {
@@ -633,18 +633,19 @@
 }
 .footer__image {
   width: 311px;
-  height: 630px;
+  height: 500px;
   position: absolute;
+  background-image: url(../../../images/footer-mobile-screen.svg);
+  background-position: top;
+  background-size: cover;
   top: -30px;
   right: 220px;
-  clip: rect(0, 311px, 500px, 0);
 }
 @media (max-width: 1350px) {
   .footer__image {
     width: 250px;
-    height: 502px;
+    height: 430px;
     right: 9vw;
-    clip: rect(0, 250px, 430px, 0);
   }
 }
 @media (max-width: 730px) {
