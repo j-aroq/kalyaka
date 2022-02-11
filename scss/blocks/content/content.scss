@@ -14,7 +14,7 @@
     @media (max-width: $tablet) {
       column-gap: 10px;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet-small) {
       grid-template-columns: 1fr;
     }
   }
@@ -30,6 +30,9 @@
       padding: 30px;
       row-gap: 12px;
       grid-template-rows: min-content minmax(min-content, 93px) min-content;
+    }
+    @media (max-width: $tablet-small) {
+      padding: 50px;
     }
     @media (max-width: $mobile) {
       max-width: 260px;
@@ -60,13 +63,16 @@
     }
   }
   &__slider {
-    width: 300px;
+    width: 389px;
     @include grid($gap-column: 4px);
     grid-template-columns: repeat(3, 4px);
     justify-content: center;
     margin-top: 20px;
     padding: 0;
     list-style: none;
+    @media (max-width: $mobile) {
+      width: 300px;
+    }
   }
   &__slider-button {
     width: 4px;
@@ -93,7 +99,11 @@
       @include font($weight: 600, $size: 33px, $l-height: 37px);
       max-width: 648px;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet-small) {
+      @include font($weight: 600, $size: 28px, $l-height: 33px);
+      max-width: 430px;
+    }
+      @media (max-width: $mobile) {
       @include font($weight: 600, $size: 26px, $l-height: 31px);
       max-width: 260px;
     }
@@ -105,7 +115,7 @@
     @media (max-width: $tablet) {
       column-gap: 15px;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet-small) {
       grid-template-columns: 1fr;
     }
   }
@@ -116,7 +126,7 @@
       width: 226px;
       height: 461px;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet-small) {
       width: 260px;
       height: 522px;
     }
@@ -132,7 +142,11 @@
       padding: 30px 119px;
       max-width: 470px;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet-small) {
+      padding: 30px 80px;
+      max-width: 300px;
+    }
+   @media (max-width: $mobile) {
       padding: 20px;
       max-width: 260px;
     }
@@ -228,6 +242,10 @@
     @media (max-width: $tablet) {
       padding: 12px 176.5px;
       margin-top: 50px;
+    }
+    @media (max-width: $tablet-small) {
+      padding: 10px 100px;
+      align-self: center;
     }
     @media (max-width: $mobile) {
       padding: 10px 80px;

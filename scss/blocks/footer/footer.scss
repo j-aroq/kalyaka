@@ -16,11 +16,15 @@
     // padding: 50px 0 50px 6.5vw;
     margin-top: 0;
   }
+  @media (max-width: $tablet-small) {
+    padding: 20px;
+    max-width: 440px;
+  }
   @media (max-width: $mobile) {
     // width: calc(100vw - 12.5vw - 20px);
     // padding: 20px 6.25vw;
     max-width: fit-content;
-    padding: 20px;
+    // padding: 20px;
     align-items: center;
   }
 
@@ -30,6 +34,10 @@
     margin: 0;
     @media (max-width: $tablet) {
       max-width: 300px;
+    }
+    @media (max-width: $tablet-small) {
+      max-width: 240px;
+      @include font($weight: 600, $size: 22px, $l-height: 24px);
     }
     @media (max-width: $mobile) {
       @include font($weight: 600, $size: 24px, $l-height: 29px);
@@ -43,6 +51,10 @@
       max-width: 300px;
       margin-bottom: 130px;
     }
+    @media (max-width: $tablet-small) {
+      max-width: 240px;
+      @include font($weight: 400, $size: 11px, $l-height: 14px, $opacity: .7);
+    }
     @media (max-width: $mobile) {
       @include font($weight: 400, $size: 12px, $l-height: 15px, $opacity: .7);
       margin: 14px 0 95px;
@@ -55,6 +67,9 @@
     text-decoration: none;
     @media (max-width: $tablet) {
       padding: 12px 80px;
+    }
+    @media (max-width: $tablet-small) {
+      padding: 10px 55px;
     }
     @media (max-width: $mobile) {
       padding: 10px 96px;
@@ -76,6 +91,12 @@
       height: 430px;
       right: 9vw;
       // clip: rect(0, 250px, 430px, 0);
+    }
+    @media (max-width: $tablet-small) {
+      top: -25px;
+      right: 20px;
+      width: 215px;
+      height: 321px;
     }
     @media (max-width: $mobile) {
       display: none;

@@ -4,6 +4,7 @@
 
   @include grid($gap-row: 60px);
   justify-items: center;
+  justify-content: center;
   @include theme ($background: $primary-color, $color: $secondary-dark-color);
 
   @media (max-width: 1340px) {

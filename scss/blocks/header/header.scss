@@ -4,7 +4,6 @@
   max-width: 1260px;
   position: relative;
   padding: 30px 0 130px 160px;
-  // padding: 30px 0 130px 11.1vw;
   @include theme ($background: $primary-dark-color, $color: $primary-color);
   @include flex($direction: column, $align: flex-start);
 
@@ -12,13 +11,14 @@
     width: calc(100vw - 6.5vw - 20px);
     max-width: 1000px;
     padding: 30px 0 50px 50px;
-    // padding: 30px 0 50px 6.5vw;
+  }
+  @media (max-width: $tablet-small) {
+    padding: 20px;
+    max-width: 440px;
   }
   @media (max-width: $mobile) {
-    // width: calc(100vw - 12.5vw - 20px);
-    // padding: 20px 6.25vw;
     max-width: fit-content;
-    padding: 20px;
+    // padding: 20px;
     align-items: center;
   }
   &__logo {
@@ -26,7 +26,6 @@
     height: 40px;
     @media (max-width: $mobile) {
       align-self: flex-start;
-      // padding-left: calc((100vw - 20px - 12.5vw - 260px)/2);
     }
   }
   &__title {
@@ -37,6 +36,10 @@
       @include font($weight: 700, $size: 33px, $l-height: 37px);
       max-width: 360px;
       margin: 50px 0 20px;
+    }
+    @media (max-width: $tablet-small) {
+      max-width: 240px;
+      @include font($weight: 700, $size: 22px, $l-height: 24px);
     }
     @media (max-width: $mobile) {
       @include font($weight: 700, $size: 24px, $l-height: 29px);
@@ -53,6 +56,11 @@
       @include font($weight: 400, $size: 15px, $l-height: 20px, $opacity: .7);
       margin-bottom: 250px;
       width: 360px;
+    }
+    @media (max-width: $tablet-small) {
+      @include font($weight: 400, $size: 11px, $l-height: 14px, $opacity: .7);
+      width: 240px;
+      margin-bottom: 200px;
     }
     @media (max-width: $mobile) {
       @include font($weight: 400, $size: 12px, $l-height: 15px, $opacity: .7);
@@ -83,6 +91,12 @@
       height: 502px;
       top: 120px;
       right: 5.86vw;
+    }
+    @media (max-width: $tablet-small) {
+      top: 110px;
+      right: 20px;
+      width: 198px;
+      height: 383px;
     }
     @media (max-width: $mobile) {
       width: 260px;
