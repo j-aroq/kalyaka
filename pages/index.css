@@ -71,7 +71,7 @@
 @media (max-width: 730px) {
   .header {
     padding: 20px;
-    max-width: 440px;
+    width: calc(100vw - 8vw - 20px);
   }
 }
 @media (max-width: 500px) {
@@ -631,7 +631,7 @@
 @media (max-width: 730px) {
   .footer {
     padding: 20px;
-    max-width: 440px;
+    width: calc(100vw - 8vw - 20px);
   }
 }
 @media (max-width: 500px) {
