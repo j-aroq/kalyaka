@@ -269,6 +269,8 @@
 }
 @media (max-width: 730px) {
   .content__card {
+    grid-template-rows: -webkit-min-content minmax(-webkit-min-content, 93px) 60px;
+    grid-template-rows: min-content minmax(min-content, 93px) 60px;
     padding: 50px;
   }
 }

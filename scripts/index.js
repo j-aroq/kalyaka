@@ -1,9 +1,10 @@
 const sliderToggles = document.querySelectorAll('.content__slider');
 const sliderButton = document.querySelectorAll('.content__slider-button');
 const sliderContainers = document.querySelectorAll('.content__slider-container');
+const sliderItems = document.querySelectorAll('.content__slider-item');
 
-function paintSliderToggles(ind, sliderContainer) {
-  sliderContainer.querySelectorAll('.content__slider-button').forEach(function(item, i) {
+function paintSliderToggles(i, sliderContainer) {
+  sliderContainer.querySelectorAll('.content__slider-button').forEach(function(item, ind) {
     if (i === ind) {
       if (item.classList.contains('content__slider-button_type_light')) {
         item.classList.remove('content__slider-button_type_light');
@@ -20,6 +21,12 @@ function paintSliderToggles(ind, sliderContainer) {
       }
     }
   })
+  if (sliderButton[i].classList.contains('content__slider-button_type_light')) {
+    sliderButton[i].classList.remove('content__slider-button_type_light');
+  }
+  if (!sliderButton[i].classList.contains('content__slider-button_type_dark')) {
+    sliderButton[i].classList.add('content__slider-button_type_dark');
+  }
 }
 
 function openMobileVersion () {
@@ -50,43 +57,42 @@ function openDesktopVersion () {
   })
 }
 
+//определяется true/false мобильной версии, чтобы при нахождении в мобильной версии
+//и изменении ширины окна не сбивался выбор слайдеров
+let mobileVersion = false;
 if (window.matchMedia("(max-width: 730px)").matches) {
   openMobileVersion();
+  mobileVersion = true;
 }
-
 window.onresize = function (ev) {
   if (window.matchMedia("(max-width: 730px)").matches) {
-    openMobileVersion();
+    if (mobileVersion === false) {
+      openMobileVersion();
+      mobileVersion = true;
+    }
   } else {
-    openDesktopVersion();
+    if (mobileVersion === true) {
+      openDesktopVersion();
+      mobileVersion = false;
+    }
   }
 }
+//
 
-let ind = -1;
-sliderButton.forEach(function(button) {
+sliderButton.forEach(function(button, i) {
   button.addEventListener('click', function () {
-    //TODO переделать костыль
-    if (button.classList.contains('content__slide-one')) {
-      ind = 0;
-    } else if (button.classList.contains('content__slide-two')) {
-      ind = 1;
-    } else if (button.classList.contains('content__slide-three')) {
-      ind = 2;
-    }
     const sliderContainer = button.closest('.content__slider-container');
-    // показываем активный слайдер и скрываем неактивные
+    // скрываем все слайдеры текущего контейнера
     sliderContainer.querySelectorAll('.content__slider-item').forEach(function(item, i) {
-      if (i === ind) {
-        if (item.classList.contains('content__visibility')) {
-          item.classList.remove('content__visibility');
-        }
-      } else {
-        if (!item.classList.contains('content__visibility')) {
-          item.classList.add('content__visibility');
-        }
+      if (!item.classList.contains('content__visibility')) {
+        item.classList.add('content__visibility');
       }
     })
-    // закрашиваем активный переключатель слайдера темным, а неактивный светлым
-    paintSliderToggles(ind, sliderContainer);
+    // показываем активный слайдер
+    if (sliderItems[i].classList.contains('content__visibility')) {
+      sliderItems[i].classList.remove('content__visibility');
+    }
+  // закрашиваем активный переключатель слайдера темным, а неактивный светлым
+    paintSliderToggles(i, sliderContainer);
   })
 })
