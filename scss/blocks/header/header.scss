@@ -1,0 +1,109 @@
+.header {
+  border-radius: $border-radius-big;
+  width: calc(100vw - 11.1vw - 20px);
+  max-width: 1260px;
+  position: relative;
+  padding: 30px 0 130px 160px;
+  @include theme ($background: $primary-dark-color, $color: $primary-color);
+  @include flex($direction: column, $align: flex-start);
+
+  @media (max-width: $tablet) {
+    width: calc(100vw - 6.5vw - 20px);
+    max-width: 1000px;
+    padding: 30px 0 50px 50px;
+  }
+  @media (max-width: $tablet-small) {
+    padding: 20px;
+    width: calc(100vw - 8vw - 20px);
+    // max-width: 440px;
+  }
+  @media (max-width: $mobile) {
+    max-width: fit-content;
+    // padding: 20px;
+    align-items: center;
+  }
+  &__logo {
+    width: 40px;
+    height: 40px;
+    @media (max-width: $mobile) {
+      align-self: flex-start;
+    }
+  }
+  &__title {
+    @include font($weight: 700, $size: 60px, $l-height: 69px);
+    max-width: 650px;
+    margin: 60px 0 28px;
+    @media (max-width: $tablet) {
+      @include font($weight: 700, $size: 33px, $l-height: 37px);
+      max-width: 360px;
+      margin: 50px 0 20px;
+    }
+    @media (max-width: $tablet-small) {
+      max-width: 240px;
+      @include font($weight: 700, $size: 22px, $l-height: 24px);
+    }
+    @media (max-width: $mobile) {
+      @include font($weight: 700, $size: 24px, $l-height: 29px);
+      max-width: 260px;
+      margin-bottom: 14px;
+    }
+  }
+  &__text {
+    @include font($weight: 400, $size: 18px, $l-height: 26px, $opacity: .7);
+    margin-top: 0;
+    margin-bottom: 108px;
+    width: 450px;
+    @media (max-width: $tablet) {
+      @include font($weight: 400, $size: 15px, $l-height: 20px, $opacity: .7);
+      margin-bottom: 250px;
+      width: 360px;
+    }
+    @media (max-width: $tablet-small) {
+      @include font($weight: 400, $size: 11px, $l-height: 14px, $opacity: .7);
+      width: 240px;
+      margin-bottom: 200px;
+    }
+    @media (max-width: $mobile) {
+      @include font($weight: 400, $size: 12px, $l-height: 15px, $opacity: .7);
+      margin-bottom: 0;
+      width: 260px;
+    }
+  }
+  &__link {
+    border-radius: $border-radius-small;
+    padding: 15px 75px;
+    text-decoration: none;
+    @media (max-width: $tablet) {
+      padding: 12px 80px;
+    }
+    @media (max-width: $mobile) {
+      padding: 10px 96px;
+    }
+  }
+  &__image {
+    width: 311px;
+    height: 630px;
+    position: absolute;
+    top: 40px;
+    right: 220px;
+    // right: 15.3vw;
+    @media (max-width: $tablet) {
+      width: 250px;
+      height: 502px;
+      top: 120px;
+      right: 5.86vw;
+    }
+    @media (max-width: $tablet-small) {
+      top: 110px;
+      right: 20px;
+      width: 198px;
+      height: 383px;
+    }
+    @media (max-width: $mobile) {
+      width: 260px;
+      height: 522px;
+      position: initial;
+      margin: 50px 0;
+    }
+  }
+}

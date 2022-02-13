@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "command": "sass",
+  "args": ["--watch", "."],
+  "tasks": [
+    {
+      "label": "sass",
+      "type": "shell",
+      "command": "sass",
+      "args": ["--watch", "."],
+      "problemMatcher": []
+    }
+  ]
+}

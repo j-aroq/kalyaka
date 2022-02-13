@@ -1,0 +1,38 @@
+.page {
+  font-family: "Inter", Arial, sans-serif;
+  padding: 10px;
+
+  @include grid($gap-row: 60px);
+  justify-items: center;
+  justify-content: center;
+  @include theme ($background: $primary-color, $color: $secondary-dark-color);
+
+  @media (max-width: 1340px) {
+    row-gap: 70px;
+  }
+
+  &__button {
+    @include font($weight: 600, $size: 16px, $l-height: 24px);
+    cursor: pointer;
+    &_type {
+      &_light {
+        @include theme ($background: $primary-color, $color: $primary-dark-color);
+        &:hover {
+          opacity: .93;
+        }
+      }
+      &_dark {
+        @include theme ($background: $primary-dark-color, $color: $primary-color);
+        &:hover {
+          opacity: .85;
+        }
+      }
+    }
+    @media (max-width: 1340px) {
+      font-size: 14px;
+    }
+    @media (max-width: 730px) {
+      font-size: 12px;
+    }
+  }
+}

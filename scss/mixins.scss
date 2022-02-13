@@ -1,0 +1,23 @@
+@mixin font($weight, $size, $l-height, $opacity: 1) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $l-height;
+  opacity: $opacity;
+}
+
+@mixin flex($direction, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin grid($gap-row: 0, $gap-column: 0) {
+  display: grid;
+  row-gap: $gap-row;
+  column-gap: $gap-column;
+}
+
+@mixin theme ($background, $color) {
+  background-color: $background;
+  color: $color;
+}

@@ -1,0 +1,258 @@
+.content {
+  @include grid($gap-row: 120px);
+  justify-items: center;
+
+  @media (max-width: $tablet) {
+    row-gap: 70px;
+  }
+
+  &__cards {
+    @include grid($gap-column: 20px);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    margin: 0;
+    @media (max-width: $tablet) {
+      column-gap: 10px;
+    }
+    @media (max-width: $tablet-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__card {
+    background-color: $secondary-color;
+    max-width: 460px;
+    padding: 40px;
+    border-radius: $border-radius-big;
+    @include grid($gap-row: 20px);
+    grid-template-rows: min-content minmax(min-content, 76px) min-content;
+    @media (max-width: $tablet) {
+      max-width: 289px;
+      padding: 30px;
+      row-gap: 12px;
+      grid-template-rows: min-content minmax(min-content, 93px) min-content;
+    }
+    @media (max-width: $tablet-small) {
+      grid-template-rows: min-content minmax(min-content, 93px) 60px;
+      padding: 50px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 260px;
+      padding: 20px;
+      grid-template-rows: min-content minmax(min-content, 93px) 100px;
+    }
+  }
+  &__subtitle {
+    @include font($weight: 500, $size: 18px, $l-height: 20px, $opacity: .6);
+    margin: 0;
+    @media (max-width: $tablet) {
+      font-size: 15px;
+    }
+  }
+  &__title {
+    @include font($weight: 600, $size: 32px, $l-height: 38px);
+    margin: 0;
+    @media (max-width: $tablet) {
+      @include font($weight: 600, $size: 26px, $l-height: 31px);
+    }
+  }
+  &__text {
+    @include font($weight: 400, $size: 16px, $l-height: 24px, $opacity: .6);
+    margin: 20px 0 0;
+    @media (max-width: $tablet) {
+      @include font($weight: 400, $size: 15px, $l-height: 20px, $opacity: .6);
+      margin-top: 7px;
+    }
+  }
+  &__slider {
+    width: 389px;
+    @include grid($gap-column: 4px);
+    grid-template-columns: repeat(3, 4px);
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    @media (max-width: $mobile) {
+      width: 300px;
+    }
+  }
+  &__slider-button {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    &_type {
+      &_light {
+        background-color: #D9D9D9;
+      }
+      &_dark {
+        background-color: #212121;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: .5;
+    }
+  }
+  &__big-title {
+    @include font($weight: 600, $size: 60px, $l-height: 68px);
+    max-width: 1100px;
+    margin: 0;
+    @media (max-width: $tablet) {
+      @include font($weight: 600, $size: 33px, $l-height: 37px);
+      max-width: 648px;
+    }
+    @media (max-width: $tablet-small) {
+      @include font($weight: 600, $size: 28px, $l-height: 33px);
+      max-width: 430px;
+    }
+      @media (max-width: $mobile) {
+      @include font($weight: 600, $size: 26px, $l-height: 31px);
+      max-width: 260px;
+    }
+  }
+  &__image-container {
+    @include grid($gap-column: 25px);
+    grid-template-columns: repeat(3, min-content);
+    justify-items: center;
+    @media (max-width: $tablet) {
+      column-gap: 15px;
+    }
+    @media (max-width: $tablet-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__image {
+    width: 350px;
+    height: 709px;
+    @media (max-width: $tablet) {
+      width: 226px;
+      height: 461px;
+    }
+    @media (max-width: $tablet-small) {
+      width: 260px;
+      height: 522px;
+    }
+  }
+  &__form {
+    max-width: 980px;
+    width: 100%;
+    background-color: $secondary-color;
+    padding: 60px;
+    border-radius: 10px;
+    @include flex($direction: column, $align: center);
+    @media (max-width: $tablet) {
+      padding: 30px 119px;
+      max-width: 470px;
+    }
+    @media (max-width: $tablet-small) {
+      padding: 30px 80px;
+      max-width: 300px;
+    }
+   @media (max-width: $mobile) {
+      padding: 20px;
+      max-width: 260px;
+    }
+  }
+  &__form-title {
+    @include font($weight: 600, $size: 32px, $l-height: 38px);
+    margin: 0;
+    max-width: 500px;
+    text-align: center;
+    @media (max-width: $tablet) {
+      @include font($weight: 600, $size: 26px, $l-height: 31px);
+    }
+    @media (max-width: $mobile) {
+    }
+  }
+  &__form-text {
+    @include font($weight: 400, $size: 16px, $l-height: 24px, $opacity: .6);
+    margin: 20px 0 0;
+    max-width: 500px;
+    text-align: center;
+    @media (max-width: $tablet) {
+      @include font($weight: 400, $size: 15px, $l-height: 20px, $opacity: .6);
+      margin-top: 24px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 20px;
+      max-width: 250px;
+    }
+  }
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__form-data {
+    margin-top: 100px;
+    @include grid($gap-row: 20px, $gap-column: 40px);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    color: $secondary-dark-color;
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 80px;
+    }
+  }
+  &__form-input {
+    @include font($weight: 400, $size: 16px, $l-height: 24px);
+    border: none;
+    cursor: pointer;
+    border-radius: $border-radius-small;
+    background-color: $primary-color;
+    padding: 15px 20px;
+    &:-webkit-autofill {
+      background-color: $primary-color;
+    }
+    &::placeholder {
+      opacity: .3;
+    }
+    &:hover {
+      border: 1px solid #E4E4E4;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid #E4E4E4;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
+
+    &_type {
+      &_message {
+        grid-column: 1/3;
+        padding-bottom: 19px;
+        resize: none;
+        @media (max-width: $tablet) {
+          grid-column: 1/2;
+        }
+      }
+    }
+  }
+  &__button {
+    border: none;
+    border-radius: $border-radius-small;
+    padding: 15px 30px;
+    margin-top: 30px;
+    width: max-content;
+    align-self: flex-end;
+    @media (max-width: $tablet) {
+      padding: 12px 176.5px;
+      margin-top: 50px;
+    }
+    @media (max-width: $tablet-small) {
+      padding: 10px 100px;
+      align-self: center;
+    }
+    @media (max-width: $mobile) {
+      padding: 10px 80px;
+    }
+  }
+  &__visibility {
+    display: none;
+  }
+}
